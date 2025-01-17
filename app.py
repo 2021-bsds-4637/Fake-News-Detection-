@@ -6,8 +6,8 @@ import os
 @st.cache_resource  # Cache the resources to avoid reloading them on every interaction
 def load_resources():
     try:
-        model = joblib.load('C:\Users\Hp\Documents\Fake News Detection\LIAR plus dataset\fake_news_model.pkl')
-        vectorizer = joblib.load('C:\Users\Hp\Documents\Fake News Detection\LIAR plus dataset\tfidf_vectorizer.pkl')
+        model = joblib.load(r'C:\Users\Hp\Documents\Fake News Detection\LIAR plus dataset\fake_news_model.pkl')
+        vectorizer = joblib.load(r'C:\Users\Hp\Documents\Fake News Detection\LIAR plus dataset\tfidf_vectorizer.pkl')
         return model, vectorizer
     except FileNotFoundError as e:
         st.error("Required files not found.")
